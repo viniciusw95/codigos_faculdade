@@ -65,8 +65,8 @@ int calcular_dias_idade(struct data nascimento)
     
     if (hoje.mes < nascimento.mes)
     {
-        // Exemplo: nasceu em Dezembro (12), mas ainda é Março (precisa descontar 9 meses da conta, pois
-        // ela ainda não fez aniversário na realidade)
+        // Exemplo: nasceu em Dezembro (12), mas ainda é Março (3) (precisa descontar 9 meses da conta, pois
+        // ela ainda não fez aniversário de verdade)
         for (int i = hoje.mes; i <= nascimento.mes - 1; i++)        
         {
             dias_idade -= dias_no_mes[i-1];

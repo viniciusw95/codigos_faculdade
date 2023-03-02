@@ -8,7 +8,18 @@
 int main(void)
 {
     int matriz[3][3];
-
-    int somar_linha;
+    int soma = 0;
+    // para cada linha em matriz
+    for (int i = 0; i < 3; i++)
+    {
+        // para cada coluna em matriz
+        for (int j =0; j < 3; j++) 
+        {
+            printf("Elemento (%i x %i): ");
+            matriz[i][j] = 1;
+            soma += matriz[i][j];
+        }
+    }
+    printf("%i\n", soma);
 
 }

@@ -13,13 +13,13 @@ void lerDatas(Data *datas, int tot) {
     
     for (int i = 0; i < tot; i++) {
         printf("Dia: ");
-        scanf("%i", &datas[i].dia);
+        scanf("%d", &datas[i].dia);
         
         printf("Mês: ");
-        scanf("%i", &datas[i].mes);
+        scanf("%d", &datas[i].mes);
         
         printf("Ano: ");
-        scanf("%i", &datas[i].ano);
+        scanf("%d", &datas[i].ano);
     }
     fflush(stdout);
 }
@@ -37,13 +37,13 @@ int main()
     printf("Mostrando datas armazenadas..: ");
     for (int i = 0; i < tot; i++) {
         printf("\nDia: ");
-        printf("%i\n", datas[i].dia);
+        printf("%d\n", datas[i].dia);
         
         printf("Mês: ");
-        printf("%i\n", datas[i].mes);
+        printf("%d\n", datas[i].mes);
         
         printf("Ano: ");
-        printf("%i\n", datas[i].ano);
+        printf("%d\n", datas[i].ano);
     }
     
     free(datas);

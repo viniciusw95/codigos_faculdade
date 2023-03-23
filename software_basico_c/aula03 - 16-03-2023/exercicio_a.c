@@ -9,8 +9,24 @@ typedef struct {
     int dia, mes, ano;
 } Data;
 
-void lerDatas(Data *datas, int tot) {
+void ler_datas(Data *datas, int tot);
+void mostrar(Data *datas, int tot);
+
+int main() {
+    int tot;
+    printf("Quantas datas deseja armazenar: ");
+    scanf("%d", &tot);
     
+    Data *datas = (Data *) malloc(tot * sizeof(Data));
+    
+    ler_datas(datas, tot);
+    mostrar(datas, tot);
+    
+    free(datas);
+    return 0;
+}
+
+void ler_datas(Data *datas, int tot) {
     for (int i = 0; i < tot; i++) {
         printf("Dia: ");
         scanf("%d", &datas[i].dia);
@@ -24,16 +40,7 @@ void lerDatas(Data *datas, int tot) {
     fflush(stdout);
 }
 
-int main()
-{
-    int tot;
-    printf("Quantas datas deseja armazenar: ");
-    scanf("%d", &tot);
-    
-    Data *datas = (Data *) malloc(tot * sizeof(Data));
-    
-    lerDatas(datas, tot);
-    
+void mostrar(Data *datas, int tot) {
     printf("Mostrando datas armazenadas..: ");
     for (int i = 0; i < tot; i++) {
         printf("\nDia: ");
@@ -45,7 +52,5 @@ int main()
         printf("Ano: ");
         printf("%d\n", datas[i].ano);
     }
-    
-    free(datas);
-    return 0;
 }
+
